@@ -1,5 +1,7 @@
 This is an implementation of the [LevelDB key/value database](https://github.com/google/leveldb) in the [Go programming language](https://go.dev).
 
+In this fork, applied sharing mode when opening files in read/write mode on Windows.
+
 [![Build Status](https://app.travis-ci.com/syndtr/goleveldb.svg?branch=master)](https://app.travis-ci.com/syndtr/goleveldb)
 
 Installation
