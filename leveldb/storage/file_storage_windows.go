@@ -40,6 +40,7 @@ func newFileLock(path string, readOnly bool) (fl fileLock, err error) {
 		shareMode = syscall.FILE_SHARE_READ | syscall.FILE_SHARE_WRITE
 	} else {
 		access = syscall.GENERIC_READ | syscall.GENERIC_WRITE
+		shareMode = syscall.FILE_SHARE_READ
 	}
 	fd, err := syscall.CreateFile(pathp, access, shareMode, nil, syscall.OPEN_EXISTING, syscall.FILE_ATTRIBUTE_NORMAL, 0)
 	if err == syscall.ERROR_FILE_NOT_FOUND {
